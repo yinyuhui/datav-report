@@ -26,6 +26,23 @@ export default {
 }
 </script>
 
+<style lang="stylus">
+.emphasis
+    color #333333
+    font-weight 700
+    margin-left 8px
+.increase, .decrease
+    width 0
+    height 0
+    border 3px solid transparent
+.increase
+    border-bottom-color red
+    margin 0 0 4px 5px
+.decrease
+    border-top-color green
+    margin 2px 0 0 5px
+</style>
+
 <style lang="stylus" scoped>
 .title
     font-size 12px
