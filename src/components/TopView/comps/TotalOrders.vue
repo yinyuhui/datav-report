@@ -1,6 +1,6 @@
 <template>
     <common-card title="累计订单量" value="2,019,229">
-        <div id="total-orders-chart" :style="{ width: '100%', height: '100%' }"></div>
+        <v-chart :options="getOptions()" />
         <template #footer>
             <span>昨日订单量</span>
             <span class="emphasis">2,000,000</span>
@@ -13,15 +13,9 @@ import CommonCardMixin from '@/utils/mixin/CommonCardMixin'
 export default {
     mixins: [CommonCardMixin],
 
-    mounted() {
-        this.drawChart()
-    },
-
     methods: {
-        drawChart() {
-            const dom = document.getElementById('total-orders-chart')
-            const chart = this.$echarts.init(dom)
-            chart.setOption({
+        getOptions() {
+            return {
                 grid: {
                     top: 0,
                     right: 0,
@@ -50,7 +44,7 @@ export default {
                         smooth: true
                     }
                 ]
-            })
+            }
         }
     }
 }

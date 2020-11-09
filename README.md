@@ -10,7 +10,7 @@
 
 `vue add element` 可以直接引入 elementUI，按需引入相关的配置项也会生成好
 
-分列的布局除了用 flex 还可以用 UI 框架提供的布局，`如 el-row`，`el-col`，一行共 24 份，如果各列总和超过 24 会自动换行
+分列的布局除了用 flex 还可以用 UI 框架提供的布局，如 `el-row`，`el-col`，一行共 24 份，如果各列总和超过 24 会自动换行
 
 ###
 
@@ -20,7 +20,9 @@ ECharts 绘制图表流程
 
 ```js
 const dom = document.getElementById(id) // id 换成对应的容器 id
+
 const chart = this.$echarts.init(dom) // echarts 全局挂载之后可以这么写
+
 chart.setOption(option) // 在 option 中设置坐标系，series 等
 ```
 
