@@ -33,3 +33,7 @@ chart.setOption(option) // 在 option 中设置坐标系，series 等
 柱状图 `series` 的 `stack` 值设为相同时，可以将两个柱体叠放（堆叠柱状图）
 
 可以自定义图表渲染函数 `renderItem(params, api)` ，`params` 主要是当前 item 的一些属性，`api` 有一些常用的方法，如 `api.value(0)` ， `api.coord([value, 0])` ，`api.size()` ， `api.style()` 等，使用时 [**查阅文档**](https://echarts.apache.org/zh/option.html#series-custom.type) 即可
+
+`vue-echarts` 和 `v-charts` 都是基于 vue 和 ECharts 封装的。但是 `v-charts` 把数据结构也封装了，提供了一些新的属性（需要二次学习），渲染一个图表需要的配置项非常简洁，也提供了一些新的图表，如水滴图、词云图
+
+`axisTick` 有个配置项 `alignWithLabel` ，设为 `true` 之后，柱状图柱体、label、标记就能对齐了

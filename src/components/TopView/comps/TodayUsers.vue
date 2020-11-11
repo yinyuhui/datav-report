@@ -1,6 +1,6 @@
 <template>
     <common-card title="今日交易用户数" value="9,165">
-        <v-chart :options="getOptions()" />
+        <v-chart :options="getOptions()" autoresize />
         <template #footer>
             <span>退货率</span>
             <span class="emphasis">5.64%</span>

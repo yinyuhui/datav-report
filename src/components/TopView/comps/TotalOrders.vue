@@ -1,6 +1,6 @@
 <template>
     <common-card title="累计订单量" value="2,019,229">
-        <v-chart :options="getOptions()" />
+        <v-chart :options="getOptions()" autoresize />
         <template #footer>
             <span>昨日订单量</span>
             <span class="emphasis">2,000,000</span>

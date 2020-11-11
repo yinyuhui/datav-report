@@ -1,6 +1,6 @@
 <template>
     <common-card title="累计用户数" value="1,006,035">
-        <v-chart :options="getOptions()" />
+        <v-chart :options="getOptions()" autoresize />
         <template #footer>
             <div class="total-users-footer">
                 <span>日同比</span>
