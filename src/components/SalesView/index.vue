@@ -1,6 +1,6 @@
 <template>
     <div class="sales-view">
-        <el-card body-style="padding-bottom: 14px">
+        <el-card shadow="hover" body-style="padding-bottom: 14px">
             <div slot="header" class="sales-view-card-header">
                 <el-menu
                     :default-active="activeIndex"
@@ -33,7 +33,7 @@
             </div>
             <div class="sales-body">
                 <div class="chart">
-                    <v-chart :options="getOption()" />
+                    <v-chart :options="getOption()" autoresize />
                 </div>
                 <div class="rank">
                     <div class="rank-title">排行榜</div>

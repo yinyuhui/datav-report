@@ -4,16 +4,18 @@ import router from './router'
 import './style/index.css'
 import './plugins/element.js'
 import './plugins/vcharts.js'
-import ECharts from 'echarts'
 import VueECharts from 'vue-echarts'
 
 import 'echarts/lib/chart/bar'
 import 'echarts/lib/chart/line'
+import 'echarts/lib/chart/pie'
+import 'echarts/lib/chart/custom'
 import 'echarts/lib/component/tooltip'
+import 'echarts/lib/component/legendScroll'
+import 'echarts/lib/component/title'
 Vue.component('v-chart', VueECharts)
 
 Vue.config.productionTip = false
-Vue.prototype.$echarts = ECharts
 
 new Vue({
     router,
