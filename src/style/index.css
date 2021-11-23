@@ -7,3 +7,25 @@
     padding: 0 !important;
     border: none !important;
 }
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.flex-s {
+    justify-content: flex-start;
+}
+
+.flex-c {
+    justify-content: center;
+}
+
+.flex-e {
+    justify-content: flex-end;
+}
+
+.flex-v {
+    flex-direction: column;
+}

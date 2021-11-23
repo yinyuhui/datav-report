@@ -4,6 +4,7 @@
         <sales-view />
         <bottom-view />
         <map-view />
+        <Footer />
     </div>
 </template>
 
@@ -12,9 +13,14 @@ import TopView from '@/components/TopView'
 import SalesView from '@/components/SalesView'
 import BottomView from '@/components/BottomView'
 import MapView from '@/components/MapView'
+import Footer from '@/components/Footer'
 export default {
     name: 'Home',
-    components: { TopView, SalesView, BottomView, MapView }
+    components: { TopView, SalesView, BottomView, MapView, Footer },
+
+    mounted () {
+        console.log('/#/map 查看地图相关功能')
+    }
 }
 </script>
 

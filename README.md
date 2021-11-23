@@ -1,8 +1,8 @@
 ## 实战记录
 
-主要是记录一些平时开发时忽视的内容，或是不太熟悉留作笔记用于巩固和查阅
+主要是记录一些平时开发时忽视，或是不太熟悉的内容，留作笔记用于巩固和查阅
 
-### 1 项目初始化
+### 0 项目初始化
 
 `vue -V` 查看 `vue-cli` 版本，`npm install -g @vue/cli` 全局安装或更新 `vue-cli`
 
@@ -12,9 +12,27 @@
 
 分列的布局除了用 flex 还可以用 UI 框架提供的布局，如 `el-row`，`el-col`，一行共 24 份，如果各列总和超过 24 会自动换行
 
-### 2 ECharts 相关
+### 2 技术选型
 
-#### 2.1 ECharts 绘制图表流程
++ 常用到的，被封装的很好：`Highcharts` , `Echarts`,  `Antv` 
++ 有更高的需求，浏览器支持的偏原理一些的：`three.js`, `zrender`, `d3`, `canvas`, `Svg`, `WebGL`
++ 硬件相关的，不考虑：`Skia`, `OpenGL`
+
+#### 2.1 canvas
+
+H5 新特性，较常用
+
+```js 
+// HTML 定义一个容器
+// 实例化得到一个实例
+// 
+```
+
+
+
+### 3 ECharts 相关
+
+#### 3.1 ECharts 绘制图表流程
 
 ```js
 const dom = document.getElementById(id) // id 换成对应的容器 id
@@ -49,3 +67,32 @@ chart.setOption(option) // 在 option 中设置坐标系，series 等
 可以自定义图表渲染函数 `renderItem(params, api)` ，`params` 主要是当前 item 的一些属性，`api` 有一些常用的方法，如 `api.value(0)` ， `api.coord([value, 0])` ，`api.size()` ， `api.style()` 等，使用时 [**查阅文档**](https://echarts.apache.org/zh/option.html#series-custom.type) 即可
 
 `vue-echarts` 和 `v-charts` 都是基于 vue 和 ECharts 封装的。但是 `v-charts` 把数据结构也封装了，提供了一些新的属性（需要二次学习），渲染一个图表需要的配置项非常简洁，也提供了一些新的图表，如水滴图、词云图
+
+### 3 百度地图
+
+#### 4.1 叠加 echarts 
+
+引入扩展包后，在 option.bmap 中定义地图配置项，如中心点，缩放等级
+
+将 series.coordinateSystem 设置为 bmap，数据格式同 geo 坐标系
+
+```js
+import 'echarts/extension/bmap/bmap'
+option.bmap = bmapOption
+series.coordinateSystem = 'bmap'
+```
+
+#### 3.2 内置动画
+
+内置动画 API，流畅度更高，避免使用定时器或 RAF
+
+
+
+
+
+
+
+
+
+
+

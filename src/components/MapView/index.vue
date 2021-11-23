@@ -1,9 +1,15 @@
 <template>
-    <p>map view</p>
+    <div class="map-view">
+        <p>map view</p>
+    </div>
 </template>
 
 <script>
 export default {}
 </script>
 
-<style></style>
+<style lang="stylus" scoped>
+.map-view {
+    margin-top 20px
+}
+</style>
